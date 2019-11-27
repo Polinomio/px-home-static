@@ -60,9 +60,14 @@ class pxHomeStatic
           This process is going to create an static file just for the homepage and save it into the destination folder. <br>Press "Generate Home" to continue.
         </p>
         ';
-      if (file_exists($this->destination . '/index.html')) {
+      if (file_exists($this->destination . DIRECTORY_SEPARATOR . 'index.html')) {
         $html .= '<div><p>The homepage static file was created on <a href="'.home_url('').'/index.html" target="_blank">index.html</a></p></div>';
       }
+
+      if ($_GET['error'] == 'cant_write') {
+        $html .= '<div class="notice notice-error is-dismissable"><p>Error creating homepage index. Directory not writable.</p></div>';
+      }
+      
       $html .= '
         <p>
           <form action="'.PX_HOME_STATIC_GENERATE_URL.'" method="post" name="options">
