@@ -1,2 +1,4 @@
-# px-home-static
-Homepage Static Generator
+aWPStandardPlugin
+=================
+
+Alvaro's Wordpress Standard Plugin
