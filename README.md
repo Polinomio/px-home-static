@@ -1,4 +1,4 @@
-aWPStandardPlugin
+PX Home Static Generator
 =================
 
-Alvaro's Wordpress Standard Plugin
+Generates a static file of the WordPress homepage.
